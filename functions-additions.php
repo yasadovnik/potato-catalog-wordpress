@@ -1,4 +1,15 @@
-// Register "variety_tags" taxonomy for posts
+<?php
+/**
+ * Additions for WordPress theme functions.php
+ * 
+ * Copy the entire content of this file to the end of your theme's functions.php
+ * Do NOT replace your existing functions.php – just append this code.
+ *
+ * @package PotatoCatalog
+ * @version 1.0
+ */
+
+// 1. Register taxonomy "variety_tags" for default posts
 function add_variety_tags_to_posts() {
     register_taxonomy( 'variety_tags', 'post', array(
         'labels' => array(
@@ -16,7 +27,7 @@ function add_variety_tags_to_posts() {
 }
 add_action( 'init', 'add_variety_tags_to_posts' );
 
-// Allow variety_tag (array) and pagenum parameters in URLs
+// 2. Allow custom query vars (array for multi-tag and pagination)
 function add_catalog_query_vars($vars) {
     $vars[] = 'variety_tag';
     $vars[] = 'pagenum';
@@ -24,7 +35,7 @@ function add_catalog_query_vars($vars) {
 }
 add_filter('query_vars', 'add_catalog_query_vars');
 
-// Add Yandex.RTB loader to <head>
+// 3. Add Yandex.RTB loader script to <head>
 function add_yandex_ads() {
     ?>
     <!-- Yandex.RTB -->
