@@ -1,5 +1,4 @@
-# Potato Variety Catalog – WordPress Page Template
-
+<img width="1365" height="1066" alt="Potato Variety Catalog" src="https://github.com/user-attachments/assets/1d49e1a9-7434-4db2-9be4-b7d548b5227f" />
 A responsive WordPress page template that allows users to filter potato varieties by multiple tags (AND logic), with pagination, view counter, comments, and integrated Yandex ads.
 
 ## Files included
